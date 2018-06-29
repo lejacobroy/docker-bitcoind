@@ -14,11 +14,11 @@ if [ ! -e "$HOME/.bitcoin/bitcoin.conf" ]; then
 disablewallet=${DISABLEWALLET:-1}
 printtoconsole=${PRINTTOCONSOLE:-1}
 rpcuser=${RPCUSER:-bitcoinrpc}
-rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
+rpcpassword=${RPCPASSWORD:-youwillneverguess}
 EOF
 
 fi
-
+#rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
 cat $HOME/.bitcoin/bitcoin.conf
 
 echo "Initialization completed successfully"

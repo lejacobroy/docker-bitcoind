@@ -51,4 +51,4 @@ WORKDIR /bitcoin
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["btc_oneshot"]
+CMD ["btc_oneshot -getinfo"]
